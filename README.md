@@ -111,7 +111,7 @@ RUBY_GC_MALLOC_LIMIT=80000000
 This had a spectacular impact - performance increased by about 40%
 
 Did not try `JRuby` cause:
-  - i'm not aware of any easy to use and portable `JRuby` web-server with streaming support
+  - i'm not aware of any easy to use and widely available `JRuby` web-server with streaming support
   - `JRuby` would for sure consume much more than 15GB of RAM
 
 Really wanted to have this test also completed on `Rubinius 2.0.0rc1 1.9mode`, but somehow it is always segfaults after ~10,000 connections because of some `libpthread` issues. Had no time to investigate this.
@@ -182,7 +182,7 @@ Follow there instructions to setup your AWS. After that done, start instances:
 wait about 2 minutes.
 You can see what happens by typing `./aws.js status`.
 
-When instances ready point them to tested host:
+When instances are ready, point them to tested host:
 
 ```
 ./aws.js set host <ip>
@@ -210,7 +210,7 @@ You should see the number of established connections as well as requests per sec
 
 ## Results
 
-<img src="https://github.com/slivu/1mc2">
+<img src="https://raw.github.com/slivu/1mc2/master/results/11-25-52.png">
 
 As you can see, all aims achieved:
 
@@ -227,15 +227,13 @@ All clients remained connected and RAM not increased(read no memory leaks).
 
 Some graphs:
 
-<img src="https://github.com/slivu/1mc2">
+<img src="https://raw.github.com/slivu/1mc2/master/results/memory-and-load.png">
 
 Mean response time are calculated by sending a request every second, registering the time needed for response and calculating the median of last 60 requests:
 
-<img src="https://github.com/slivu/1mc2">
+<img src="https://raw.github.com/slivu/1mc2/master/results/response-time.png">
 
-Here you can see the progress - screenshots taken every 15 seconds(history starts at 12th slide):
-
-https://speakerdeck.com/slivu/
+Here you can see the progress - screenshots taken every 15 seconds(history starts at 12th slide): [https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections](https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections)
 
 <hr>
 
