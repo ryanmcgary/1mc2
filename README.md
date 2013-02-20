@@ -233,7 +233,8 @@ Mean response time are calculated by sending a request every second, registering
 
 <img src="https://raw.github.com/slivu/1mc2/master/results/response-time.png">
 
-Here you can see the progress - screenshots taken every 15 seconds(history starts at 12th slide): [https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections](https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections)
+On link below you can see the progress - screenshots taken every 15 seconds(history starts at 12th slide):<br>
+[https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections](https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections)
 
 <hr>
 
