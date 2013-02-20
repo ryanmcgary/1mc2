@@ -176,28 +176,28 @@ Using [ec2-fleet](https://github.com/ashtuchkin/ec2-fleet) it is really easy to 
 Follow there instructions to setup your AWS. After that done, start instances:
 
 ```
-./aws.js start 50
+$ ./aws.js start 50
 ```
 
 wait about 2 minutes.
-You can see what happens by typing `./aws.js status`.
+You can see what happens by typing `$ ./aws.js status`
 
 When instances are ready, point them to tested host:
 
 ```
-./aws.js set host <ip>
+$ ./aws.js set host <ip>
 ```
 
 our app running on 5252 port:
 
 ```
-./aws.js set port 5252
+$ ./aws.js set port 5252
 ```
 
 set the number of connections per instance:
 
 ```
-./aws set n 20000
+$ ./aws set n 20000
 ```
 
 Now we have 50 instances that will generate 20,000 clients each, resulting in 1,000,000 connections.
